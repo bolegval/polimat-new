@@ -29,6 +29,10 @@ task('clean', () => {
     return del(DIST_PATH);
 });
 
+task('copy', () => {
+    return src(`${SRC_PATH}/assets/**`).pipe(dest(DIST_PATH));
+});
+
 task('pug', () => {
     return src(`${SRC_PATH}/pug/*pug`)
         .pipe(
@@ -115,6 +119,7 @@ task('server', () => {
 });
 
 task('watch', () => {
+    watch(`${SRC_PATH}/assets/**`, series('copy'));
     watch(`${SRC_PATH}/styles/**/*.sass`, series('styles'));
     watch(`${SRC_PATH}/pug/**/*.pug`, series('pug'));
     watch(`${SRC_PATH}/scripts/**/*.js`, series('scripts'));
@@ -125,7 +130,7 @@ task('watch', () => {
 task('default',
     series(
         'clean',
-        parallel('pug', 'styles', 'scripts', 'img', 'icons'),
+        parallel('copy', 'pug', 'styles', 'scripts', 'img', 'icons'),
         parallel('watch', 'server')
     )
 );
@@ -133,6 +138,6 @@ task('default',
 task('build',
     series(
         'clean',
-        parallel('pug', 'styles', 'scripts', 'img', 'icons')
+        parallel('copy', 'pug', 'styles', 'scripts', 'img', 'icons')
     )
 );
