@@ -40,7 +40,7 @@ task('pug', () => {
                 pretty: true,
             })
         )
-        .pipe(webpHTML())
+        // .pipe(webpHTML())
         .pipe(dest(DIST_PATH))
         .pipe(browserSync.stream());
 });

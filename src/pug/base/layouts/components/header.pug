@@ -1,0 +1,73 @@
+header.header
+    .header-top
+        .container.header-top-wrapper
+            .header__contacts.contacts
+                a.header__item.header__item--phone(href="tel:+74952873377")
+                    svg
+                        use(xlink:href="img/icons/sprite.svg#phone")
+                    | +7 (495) 287-33-77
+                a.header__item.header__item--mail(href="mailto:info@polimat.ru")
+                    svg
+                        use(xlink:href="img/icons/sprite.svg#mail")
+                    | info@polimat.ru
+                .header__item.header__item--mode
+                    svg
+                        use(xlink:href="img/icons/sprite.svg#clock")
+                    span пн-пт:&nbsp;
+                    | 09:00 - 18:00,
+                    span &nbsp;сб-вс:&nbsp;
+                    | Выходной
+            .header__auth
+                button.header__item.header__auth-btn(role="button")
+                    svg
+                        use(xlink:href="img/icons/sprite.svg#account")
+                    | Вход / Регистрация
+    .header-bottom
+        .container.header-bottom__wrapper
+            img.header-bottom__logo(src="img/logo.svg")
+            .header-bottom__navigation
+                .header-bottom__menu
+                    nav.menu
+                        ul.menu__list
+                            li.menu__item
+                                a.menu__link(href="#") Оплата и доставка
+                            li.menu__item.menu__item--info
+                                a.menu__link.menu__link--info(href="#") Информация
+                            li.menu__item
+                                a.menu__link(href="#") Клиентам
+                            li.menu__item
+                                a.menu__link(href="#") Дилерам
+                            li.menu__item
+                                a.menu__link(href="#") Контакты
+                            li.menu__item.menu__item--sale
+                                a.menu__link.menu__link--sale(href="#")
+                                    svg
+                                        use(xlink:href="img/icons/sprite.svg#flame")
+                                    | Акции и скидки
+                    ul.header-bottom__actions.actions
+                        li.actions__item
+                            button.actions__btn.actions__btn--search(role="button")
+                        li.actions__item
+                            button.actions__btn.actions__btn--compare(role="button")
+                        li.actions__item
+                            button.actions__btn.actions__btn--like(role="button")
+                        li.actions__item
+                            button.actions__btn.actions__btn--basket(role="button")
+                            .actions__quantity.text-center
+                                span 2
+                .header-bottom__catalog-menu
+                    nav.catalog-menu
+                        ul.catalog-menu__list
+                            li.catalog-menu__item
+                                a.catalog-menu__link(href="#") Календарные блоки
+                            li.catalog-menu__item
+                                a.catalog-menu__link(href="#") курсоры
+                            li.catalog-menu__item
+                                a.catalog-menu__link(href="#") комплектующие для календарей
+                            li.catalog-menu__item
+                                a.catalog-menu__link(href="#") для ежедневников
+                            li.catalog-menu__item
+                                a.catalog-menu__link(href="#") расходные материалы
+                            li.catalog-menu__item
+                                a.catalog-menu__link(href="#") защитные экраны
+

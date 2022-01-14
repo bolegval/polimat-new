@@ -1,0 +1,91 @@
+html
+  font-size: $basis-font-size
+body
+  font-size: $default-font-size
+  line-height: $default-line-height
+
+h1
+  font-size: $text-26
+  line-height: $text-30
+  font-weight: $fwm-black
+
+h2
+  font-size: $text-20
+  font-weight: $fwm-bold
+  line-height: 1
+
+h3
+  font-size: $text-15
+  font-weight: $fwm-bold
+  line-height: 1.4
+
+h4
+  font-size: $text-15
+  font-weight: $fwm-medium
+  line-height: 1.4
+
+h5
+  font-size: $text-13
+  font-weight: $fwm-medium
+  line-height: $text-20
+
+h1, h2, h3, h4, h5
+  color: $black
+  margin: 0 0 .5em
+
+p
+  font-weight: $fwm-regular
+  margin-top: 0
+  font-size: $text-15
+  color: $black
+
+b
+  font-weight: $fwm-medium
+
+a
+  transition-duration: .2s
+  color: $black
+  text-decoration: none
+  cursor: pointer
+  &:active,
+  &:hover
+    outline-width: 0
+
+
+a:not([href]):not([tabindex]):focus, a:not([href]):not([tabindex]):hover
+  text-decoration: none
+
+a:not([href]):not([tabindex]):focus
+  outline: 0
+
+[role="button"]
+  cursor: pointer
+a,
+area,
+button,
+[role="button"],
+input,
+label,
+select,
+summary,
+textarea
+  -ms-touch-action: manipulation
+  touch-action: manipulation
+
+ol,
+ul,
+dl
+  list-style: none
+  margin: 0
+  padding: 0
+
+ol,
+ul
+  li
+    font-size: $text-15
+
+.ttu
+  text-transform: uppercase !important
+
+.text-center
+  text-align: center

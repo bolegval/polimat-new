@@ -1,0 +1,145 @@
+.header
+  position: relative
+  border-bottom: 3px solid $theme-1
+  &-top
+    background-color: $grey-0
+    padding-top: 16px
+    padding-bottom: 18px
+    &-wrapper
+      display: flex
+      justify-content: space-between
+      align-items: center
+  &__contacts
+    display: flex
+  &__item
+    display: flex
+    align-items: center
+    & svg
+      fill: $grey-4
+      width: 18px
+      height: 18px
+      margin-right: 15px
+    &--phone
+      font-size: $text-14
+      font-weight: $fwm-semi-bold
+      margin-right: 148px
+    &--mail
+      font-size: $text-13
+      margin-right: 38px
+    &--mode
+      padding-left: 30px
+      font-size: $text-13
+      border-left: 1px solid $grey-1
+      & span
+        ont-size: $text-12
+  &-bottom
+    &__wrapper
+      display: flex
+      align-items: center
+    &__navigation
+      width: 100%
+    &__menu
+      display: flex
+      justify-content: space-between
+      align-items: center
+      padding-left: 74px
+    &__catalog-menu
+      padding-left: 74px
+
+.menu
+  padding-top: 27px
+  padding-bottom: 26px
+  &__list
+    display: flex
+  &__item
+    color: $dark-1
+    &:not(:last-child)
+      margin-right: 40px
+  &__link
+    display: flex
+    align-items: center
+    &--info::after
+      content: ''
+      display: inline-block
+      width: 7px
+      height: 8px
+      margin-left: 7px
+      background: url('../img/arrow-down.svg') no-repeat
+    &--sale svg
+      fill: $theme-3
+      margin-right: 10px
+      width: 24px
+      height: 24px
+.actions
+  display: flex
+  align-items: center
+  &__item
+    position: relative
+    margin-right: 28px
+    &:not(:first-child)
+      margin-left: 28px
+  &__btn
+    &--search
+      width: 24px
+      height: 24px
+      background: url('../img/search.svg') center no-repeat
+    &--compare
+      width: 30px
+      height: 24px
+      background: url('../img/compare.svg') center no-repeat
+    &--like
+      width: 26px
+      height: 26px
+      background: url('../img/heart.svg') center no-repeat
+    &--basket
+      width: 25px
+      height: 29px
+      background: url('../img/basket.svg') center no-repeat
+  &__quantity
+    position: absolute
+    top: -20%
+    right: -55%
+    display: inline-block
+    width: 20px
+    height: 20px
+    background-color: $theme-1
+    border-radius: 3px
+    color: $white
+    & span
+      font-size: $text-11
+      vertical-align: middle
+
+.catalog-menu
+  position: relative
+  padding-top: 25px
+  padding-bottom: 26px
+  background-color: $theme-1
+  &::before
+    content: ''
+    position: absolute
+    width: 71px
+    height: 100%
+    top: 0
+    left: -3%
+    background-color: $theme-1
+    border-top-left-radius: 5px
+    transform: skewX(137deg)
+  &__list
+    position: relative
+    display: flex
+    justify-content: space-between
+    align-items: center
+  &__item
+    font-size: $text-14
+    font-weight: $fwm-semi-bold
+    text-transform: uppercase
+  &__link
+    color: $white
+    &::after
+      content: ''
+      display: inline-block
+      width: 7px
+      height: 8px
+      margin-left: 6px
+      background: url('../img/arrow-down-white.svg') no-repeat
+
